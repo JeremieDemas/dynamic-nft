@@ -1,6 +1,6 @@
 # NFT-collection-template
 
-Creation of a template for setting up an NFT collection.
+Creation of a template for setting up an dynamic NFT collection.
 
 ## Getting Started
 
