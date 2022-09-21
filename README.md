@@ -40,3 +40,7 @@ CONTRACT_ADDRESS = "contract-address"
 ```
 npx hardhat mint
 ```
+
+8. Update metadatas.
+
+Go to your contract on etherscan (https://rinkeby.etherscan.io/address/CONTRACT_ADDRESS#writeContract) and run the function setTokenURI.

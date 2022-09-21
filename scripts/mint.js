@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 require('dotenv').config();
 const { CONTRACT_NAME } = process.env;
 const { task } = require("hardhat/config");

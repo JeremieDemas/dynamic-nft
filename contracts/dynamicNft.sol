@@ -11,10 +11,10 @@ contract DynamicNft is ERC721, Ownable {
     Counters.Counter private currentTokenId;
 
     /// @dev Base token URI used as a prefix by tokenURI()
-    string public baseTokenURI;
+    string public newTokenURI;
 
     constructor() ERC721("DynamicNft", "DNFT") {
-        baseTokenURI = "";
+        newTokenURI = "";
     }
 
     function mint() public {
@@ -30,16 +30,16 @@ contract DynamicNft is ERC721, Ownable {
         returns (string memory)
     {
         _tokenId;
-        return baseTokenURI;
+        return newTokenURI;
     }
 
     /// @dev Returns an URI for a given token ID
     function _baseURI() internal view virtual override returns (string memory) {
-        return baseTokenURI;
+        return newTokenURI;
     }
 
     /// @dev Sets the base token URI prefix
-    function setBaseTokenURI(string memory _baseTokenURI) public onlyOwner {
-        baseTokenURI = _baseTokenURI;
+    function setTokenURI(string memory _newTokenURI) public onlyOwner {
+        newTokenURI = _newTokenURI;
     }
 }
